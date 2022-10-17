@@ -8,4 +8,5 @@ chapter_item:
   - chapter_name: start
   - chapter_name: day-7
   - chapter_name: day-8
+  - chapter_name: day-4
 ---
