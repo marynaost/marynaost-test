@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import * as React from 'react';
+import { Link, useI18next } from 'gatsby-plugin-react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Layout = ({ pageTitle, children }) => {
   const { languages, changeLanguage } = useI18next();
@@ -8,13 +8,15 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
       <header>
-        <h1>{t("Title")}</h1>
+        <h1 className="text-3xl font-bold text-blue-600 underline">
+          {t('Title')}
+        </h1>
         <ul>
-          {languages.map((lng) => (
+          {languages.map(lng => (
             <li key={lng}>
               <a
                 href="/"
-                onClick={(e) => {
+                onClick={e => {
                   e.preventDefault();
                   changeLanguage(lng);
                 }}
