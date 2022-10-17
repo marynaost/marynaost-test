@@ -3,9 +3,7 @@ chapter: day-4
 title: День 4
 language: ru
 subhead:
-  - subhead_title:
-      - label: Общие вопросы
-        value: Общие вопросы
+  - subhead_title: Общие вопросы
     questions:
       - image:
           alt: image for answer
