@@ -14,4 +14,10 @@ subhead:
           вы указали **display:flex**. У нас есть `<div>` с классом **wrapper**,
           в нем `<aside>` и `<div>` с классом **about-me-container**, классу
           **wrapper** нужно написать **display: flex**."
+  - subhead_title: Общие вопросы
+    questions:
+      - image:
+          alt: image for answer
+        question_title: title1
+        description: decr1
 ---
