@@ -20,4 +20,12 @@ subhead:
           alt: image for answer
         question_title: title1
         description: decr1
+      - image:
+          alt: image for answer
+        question_title: title2
+        description: descr2
+      - image:
+          alt: image for answer
+        question_title: title3
+        description: descr3
 ---
