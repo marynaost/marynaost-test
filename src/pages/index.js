@@ -44,9 +44,9 @@ const IndexPage = ({ data }) => {
                               <h2>
                                 <Markdown>{question.question_title}</Markdown>
                               </h2>
-                              <p>
+                              <div>
                                 <Markdown>{question.description}</Markdown>
-                              </p>
+                              </div>
                             </li>
                           );
                         })}
