@@ -1,9 +1,9 @@
-import * as React from "react";
-import { useState } from "react";
-import Layout from "../components/Layout/Layout";
-import { graphql } from "gatsby";
-import Markdown from "markdown-to-jsx";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import * as React from 'react';
+import { useState } from 'react';
+import Layout from '../components/Layout/Layout';
+import { graphql } from 'gatsby';
+import Markdown from 'markdown-to-jsx';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 // const IndexPage = () => {
 const IndexPage = ({ data }) => {
@@ -14,13 +14,16 @@ const IndexPage = ({ data }) => {
   console.log(days);
   return (
     <Layout pageTitle="Home Page">
-      <p>{t("Subtitle")}</p>
+      <p>{t('Subtitle')}</p>
       <ul>
         {days
           ? days?.map(({ id, frontmatter }) => {
               return (
                 <li key={frontmatter.title}>
-                  <button onClick={() => setOpenedDayId(id)}>
+                  <button
+                    className="border-4 border-indigo-500/75 "
+                    onClick={() => setOpenedDayId(id)}
+                  >
                     {frontmatter.title}
                   </button>
                 </li>
@@ -31,7 +34,7 @@ const IndexPage = ({ data }) => {
       <ul>
         {days
           ? days
-              ?.find((day) => openedDayId === day.id)
+              ?.find(day => openedDayId === day.id)
               ?.frontmatter?.subhead?.map(
                 ({ subhead_title, questions }, index) => {
                   return (

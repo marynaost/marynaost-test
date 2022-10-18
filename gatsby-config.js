@@ -55,5 +55,45 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-local-search`,
+      options: {
+        name: 'pages',
+        engine: 'flexsearch',
+        engineOptions: {
+          tokenize: 'forward',
+        },
+        query: `
+          {
+            allMarkdownRemark {
+              nodes {
+                frontmatter {
+                  chapter
+                  language
+                  title
+                  subhead {
+                    subhead_title
+                    questions {
+                      question_title
+                      description
+                    }
+                  }
+                }
+                id
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'question_title'],
+        store: ['id', 'title', 'question_title'],
+        normalizer: ({ data }) =>
+          data.allMarkdownRemark.nodes.map(node => ({
+            id: node.id,
+            title: node.frontmatter.title,
+            question_title: node.frontmatter.subhead.questions,
+          })),
+      },
+    },
   ],
 };

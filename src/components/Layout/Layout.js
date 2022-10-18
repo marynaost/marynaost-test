@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, useI18next } from 'gatsby-plugin-react-i18next';
+import { useI18next } from 'gatsby-plugin-react-i18next';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 const Layout = ({ pageTitle, children }) => {
